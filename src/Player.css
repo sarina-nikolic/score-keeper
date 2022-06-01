@@ -1,0 +1,12 @@
+.Player {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.Player__name {
+  height: 2rem;
+  width: 2rem;
+}
