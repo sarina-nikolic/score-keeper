@@ -11,6 +11,14 @@ function App() {
     setPlayers([...players, player]);
   }
 
+  function resetAllScores() {
+    setPlayers(
+      players.map((player) => {
+        return { ...player, score: 0 };
+      })
+    );
+  }
+
   return (
     <div className="App">
       {/* eslint-disable-next-line */}
