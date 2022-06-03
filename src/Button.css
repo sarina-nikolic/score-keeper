@@ -1,6 +1,8 @@
 .Button {
-    padding: 12px;
-    background-color: green;
-    
- 
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: grey;
 }
