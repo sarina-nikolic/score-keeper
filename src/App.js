@@ -11,12 +11,36 @@ function App() {
     setPlayers([...players, player]);
   }
 
+  function decreaseScore(index) {
+    const currentPlayer = players[index];
+    setPlayers([
+      ...players.slice(0, index),
+      { ...currentPlayer, score: currentPlayer.score - 1 },
+      ...players.slice(index + 1),
+    ]);
+  }
+
+  function increaseScore(index) {
+    const currentPlayer = players[index];
+    setPlayers([
+      ...players.slice(0, index),
+      { ...currentPlayer, score: currentPlayer.score + 1 },
+      ...players.slice(index + 1),
+    ]);
+  }
+
   return (
     <div className="App">
       {/* eslint-disable-next-line */}
       <ul className="Player-list" role="list">
-        {players.map((player) => (
-          <Player key={player.name} name={player.name} score={player.score} />
+        {players.map((player, index) => (
+          <Player
+            key={player.name}
+            name={player.name}
+            score={player.score}
+            onDecreaseScore={() => decreaseScore(index)}
+            onIncreaseScore={() => increaseScore(index)}
+          />
         ))}
       </ul>
       <Button text="Reset scores" />
