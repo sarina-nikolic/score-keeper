@@ -1,15 +1,12 @@
-import { useState } from "react";
 import "./PlayerForm.css";
 
-export default function PlayerForm() {
-  const [players, setPlayers] = useState([]);
-
+export default function PlayerForm({ onCreatePlayer }) {
   function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
     const { name } = form.elements;
     const newPlayer = { name: name.value, score: 0 };
-    setPlayers([...players, newPlayer]);
+    onCreatePlayer(newPlayer);
     form.reset();
     name.focus();
   }
