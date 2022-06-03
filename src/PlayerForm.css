@@ -1,0 +1,6 @@
+.PlayerForm {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 0.8rem;
+}
