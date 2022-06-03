@@ -8,9 +8,9 @@ export default function Player({
   return (
     <li className="Player">
       <span className="Player__name">{name}</span>
-      <button>-</button>
+      <button onClick={onDecreaseScore}>-</button>
       {score}
-      <button>+</button>
+      <button onClick={onIncreaseScore}>+</button>
     </li>
   );
 }
