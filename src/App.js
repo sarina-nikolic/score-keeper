@@ -37,6 +37,10 @@ function App() {
     );
   }
 
+  function resetAllPlayers() {
+    setPlayers([]);
+  }
+
   return (
     <div className="App">
       {/* eslint-disable-next-line */}
@@ -51,8 +55,8 @@ function App() {
           />
         ))}
       </ul>
-      <Button text="Reset players" />
-      <Button text="Reset all scores" />
+      <Button onClick={resetAllScores}>Reset Scores</Button>
+      <Button onClick={resetAllPlayers}>New Game</Button>
       <PlayerForm onCreatePlayer={createPlayer} />
     </div>
   );
