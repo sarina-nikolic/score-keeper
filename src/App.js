@@ -29,6 +29,14 @@ function App() {
     ]);
   }
 
+  function resetAllScores() {
+    setPlayers(
+      players.map((player) => {
+        return { ...player, score: 0 };
+      })
+    );
+  }
+
   return (
     <div className="App">
       {/* eslint-disable-next-line */}
@@ -43,8 +51,8 @@ function App() {
           />
         ))}
       </ul>
-      <Button text="Reset scores" />
-      <Button text="Reset all" />
+      <Button text="Reset players" />
+      <Button text="Reset all scores" />
       <PlayerForm onCreatePlayer={createPlayer} />
     </div>
   );
