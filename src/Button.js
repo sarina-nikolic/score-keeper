@@ -1,9 +1,9 @@
 import "./Button.css";
 
-export default function Button({ text, resetAllScores }) {
+export default function Button({ onClick, children }) {
   return (
-    <button onClick={resetAllScores} className="Button">
-      {text}
+    <button onClick={onClick} className="Button">
+      {children}
     </button>
   );
 }
