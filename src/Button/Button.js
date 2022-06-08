@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export default function Button({ onClick, children }) {
-  return <button onClick={onClick}>{children}</button>;
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 }
 
-const Button = styled.button`
+const StyledButton = styled.button`
   padding: 1rem;
   gap: 0.5rem;
   display: flex;
