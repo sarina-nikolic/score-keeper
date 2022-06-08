@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Button from "./Button.js";
-import Player from "./Player.js";
-import PlayerForm from "./PlayerForm.js";
+import Button from "./Button/Button.js";
+import Player from "./Player/Player.js";
+import PlayerForm from "./PlayerForm/PlayerForm.js";
 import { getFromLocal, setToLocal } from "./lib/localStorage";
 
 function App() {
