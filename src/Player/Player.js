@@ -1,4 +1,4 @@
-import "./Player.css";
+import styled from "styled-components";
 
 export default function Player({
   name,
@@ -7,11 +7,25 @@ export default function Player({
   onIncreaseScore,
 }) {
   return (
-    <li className="Player">
-      <span className="Player__name">{name}</span>
+    <StyledPlayer>
+      <PlayerName>{name}</PlayerName>
       <button onClick={onDecreaseScore}>-</button>
       {score}
       <button onClick={onIncreaseScore}>+</button>
-    </li>
+    </StyledPlayer>
   );
 }
+
+const StyledPlayer = styled.player`
+  list-style: none;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+`;
+
+const PlayerName = styled.playerName`
+  margin-right: auto;
+`;
