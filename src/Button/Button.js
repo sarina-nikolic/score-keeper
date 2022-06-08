@@ -11,5 +11,4 @@ const StyledButton = styled.button`
   flex-wrap: wrap;
   justify-content: space-evenly;
   border-radius: 100px;
-}
 `;
